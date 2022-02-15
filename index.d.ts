@@ -19,6 +19,15 @@ interface KeyboardAwareProps {
    * @memberof KeyboardAwareProps
    */
   innerRef?: (ref: JSX.Element) => void
+  
+  /**
+   * Array of TextInput used to scroll in to view on focus.
+   *
+   * @type {function}
+   * @memberof KeyboardAwareProps
+   */
+  getTextInputRefs?: () => React.MutableRefObject<TextInput | null>[]
+  
   /**
    * Adds an extra offset that represents the TabBarIOS height.
    *
